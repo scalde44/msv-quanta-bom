@@ -19,7 +19,7 @@ Esta aplicación es un sistema de gestión de listas de materiales (BOM) para pr
 
 1. **Clonar o descargar el proyecto**:
    ```
-   git clone <url-del-repositorio>
+   git clone https://github.com/scalde44/msv-quanta-bom.git
    cd msv-quanta-bom
    ```
 
@@ -56,7 +56,7 @@ Los datos se pierden al reiniciar la aplicación.
 
 - **POST /products/{id}/materials**: Agregar un material a un producto.
   - Body: `{"material": "Nombre del material", "quantity": 1}`
-  - Respuesta: 200 OK (sin contenido)
+  - Respuesta: 201 CREATED (sin contenido)
 
 ### Producción
 
@@ -88,15 +88,7 @@ El proyecto sigue una arquitectura hexagonal (puertos y adaptadores):
 - **Application**: Casos de uso.
 - **Infrastructure**: Adaptadores para persistencia, web, configuración.
 
-## Pruebas
-
-Ejecuta las pruebas con:
-```
-mvn test
-```
 
 ## Notas Adicionales
 
 - La aplicación está configurada para desarrollo con H2. Para producción, cambiar a una base de datos persistente.
-- Los logs se muestran en la consola al ejecutar.</content>
-<parameter name="filePath">C:\Users\steve\Desktop\Revision\msv-quanta-bom\README.md
